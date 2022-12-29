@@ -114,17 +114,17 @@ def hysteresis(img, lowThreshold, highThreshold):
     return img
 
 
-def Canny_Edge_Detection(image_path):
+def Canny_Edge_Detection(image_path, lowThreshold=25, highThreshold=250):
     img = open_image(image_path)
     ker = kernel_gaussian(5, 20)
     img = F.conv2d(img[None, :], ker[None, None, :])
     img, theta = grad_cal(torch.squeeze(img))
     img = non_maximum(torch.squeeze(img), torch.squeeze(theta))
     img = threshold(img, 0.045, 0.1)
-    img = hysteresis(img, lowThreshold=25, highThreshold=250)
+    img = hysteresis(img, lowThreshold=lowThreshold, highThreshold=highThreshold)
     return img
 
 
 if __name__ == "__main__":
-    result = Canny_Edge_Detection("bowl-of-fruit.jpg")
+    result = Canny_Edge_Detection("bowl-of-fruit.jpg", lowThreshold=25, highThreshold=250)
     plt.imshow(np.array(result), cmap="gray")
