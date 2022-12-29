@@ -10,9 +10,9 @@ This project implements the Canny edge detection algorithm to identify edges in 
 
 ## Example (Input-Output):
 Input image:
-![alt text] (https://github.com/NimaVahdat/Canny_Edge_Detection/blob/main/Images/bowl-of-fruit.jpg)
+![alt text] (https://github.com/NimaVahdat/Canny_Edge_Detection/blob/main/Images/bowl-of-fruit.jpg?raw=true)
 Output image:
-![alt text] (https://github.com/NimaVahdat/Canny_Edge_Detection/blob/main/Images/edges.png)
+![alt text] (https://github.com/NimaVahdat/Canny_Edge_Detection/blob/main/Images/edges.png?raw=true)
 
 To use this project, you will need to install the following dependencies:
 
